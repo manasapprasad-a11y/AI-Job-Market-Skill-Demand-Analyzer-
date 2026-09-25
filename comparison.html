@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Comparison - AI-Driven Job Market Skill Demand Analyzer</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Style Sheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-futuristic sticky-top">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-neon" href="index.html">
+                <span>⚡</span> AI Career Hub
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-futuristic" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-futuristic" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-futuristic" href="recommendation.html">Recommendations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-futuristic active" href="comparison.html">Comparison</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-futuristic" href="estimator.html">Learning Estimator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-futuristic" href="readiness.html">Resume Analyzer</a>
+                    </li>
+                </ul>
+                <div class="profile-dropdown-container">
+                    <button class="btn-profile-trigger" id="profileTriggerBtn">
+                        👤 Profile <span style="font-size:0.75rem;">▼</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="container my-5">
+        <h2 class="text-gradient-purple">⚖️ Side-by-Side Career Comparison</h2>
+        <p class="text-details-custom">
+            Select two modern tech career paths below to compare salary distributions, market demand scales, growth indices, and learning difficulty curves side-by-side.
+        </p>
+    </div>
+
+    <!-- Main Comparison Panel -->
+    <main class="container mb-5">
+        <section class="glass-card mb-4">
+            <h4 class="neon-text-purple mb-4">Select Target Paths</h4>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <label class="form-label text-muted-custom">Career Path A</label>
+                    <select class="form-select form-control-glass py-3" id="compCareerSelect1">
+                        <!-- Dynamic options -->
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label text-muted-custom">Career Path B</label>
+                    <select class="form-select form-control-glass py-3" id="compCareerSelect2">
+                        <!-- Dynamic options -->
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparative Output Grid -->
+        <section id="comparisonResultsContainer" style="display:none;">
+            <div class="row g-4">
+                
+                <!-- Career Name Titles -->
+                <div class="col-md-6 text-center text-md-start">
+                    <div class="glass-card cyan-glow">
+                        <small class="text-details-custom">PATH A</small>
+                        <h2 class="neon-text-cyan my-2" id="compName1">Data Analyst</h2>
+                        <div class="mt-3">
+                            <span class="text-details-custom">Growth Index:</span>
+                            <span class="text-secondary-custom font-weight-bold" id="compGrowth1">18% YOY</span>
+                        </div>
+                        <div class="mt-2">
+                            <span class="text-details-custom">Required Est. Study:</span>
+                            <span class="text-gradient-cyan" id="compTime1">3 Months</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 text-center text-md-start">
+                    <div class="glass-card pink-glow">
+                        <small class="text-details-custom">PATH B</small>
+                        <h2 class="neon-text-pink my-2" id="compName2">Data Scientist</h2>
+                        <div class="mt-3">
+                            <span class="text-details-custom">Growth Index:</span>
+                            <span class="text-secondary-custom font-weight-bold" id="compGrowth2">25% YOY</span>
+                        </div>
+                        <div class="mt-2">
+                            <span class="text-details-custom">Required Est. Study:</span>
+                            <span class="text-gradient-pink" id="compTime2">6 Months</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Salary comparison metrics -->
+                <div class="col-12">
+                    <div class="glass-card">
+                        <h5 class="neon-text-purple mb-4">💰 Expected Entry Salary Scale</h5>
+                        
+                        <div class="row g-4 align-items-center mb-4">
+                            <div class="col-md-3">
+                                <strong class="text-gradient-cyan font-weight-bold" style="font-size:1.1rem;" id="compSal1">₹4.5L - ₹9.5L</strong>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="progress" style="height: 20px;">
+                                    <div class="progress-bar bg-info" id="barSal1" style="width: 30%">₹4.5L</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-4 align-items-center">
+                            <div class="col-md-3">
+                                <strong class="text-gradient-pink font-weight-bold" style="font-size:1.1rem;" id="compSal2">₹7.5L - ₹16.0L</strong>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="progress" style="height: 20px;">
+                                    <div class="progress-bar bg-danger" id="barSal2" style="width: 50%">₹7.5L</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Demand index metrics -->
+                <div class="col-md-6">
+                    <div class="glass-card cyan-glow">
+                        <h5 class="neon-text-cyan mb-4">📊 General Market Demand Index</h5>
+                        
+                        <div class="mb-4">
+                            <label class="text-details-custom mb-1" id="compName1Label">Path A</label>
+                            <div class="progress" style="height: 18px;">
+                                <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" id="barDemand1" style="width: 70%">70%</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="text-details-custom mb-1" id="compName2Label">Path B</label>
+                            <div class="progress" style="height: 18px;">
+                                <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" id="barDemand2" style="width: 85%">85%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Difficulty index metrics -->
+                <div class="col-md-6">
+                    <div class="glass-card pink-glow">
+                        <h5 class="neon-text-pink mb-4">🧠 Learning & Entry Difficulty</h5>
+                        
+                        <div class="mb-4">
+                            <label class="text-details-custom mb-1">Path A Difficulty Index</label>
+                            <div class="progress" style="height: 18px;">
+                                <div class="progress-bar bg-info" id="barDiff1" style="width: 45%">Medium (45%)</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="text-details-custom mb-1">Path B Difficulty Index</label>
+                            <div class="progress" style="height: 18px;">
+                                <div class="progress-bar bg-danger" id="barDiff2" style="width: 80%">High (80%)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core required skills chips comparison -->
+                <div class="col-md-6">
+                    <div class="glass-card">
+                        <h5 class="neon-text-purple mb-3">🛠 Core Required Skills: Path A</h5>
+                        <div id="compSkills1" class="d-flex flex-wrap"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="glass-card">
+                        <h5 class="neon-text-purple mb-3">🛠 Core Required Skills: Path B</h5>
+                        <div id="compSkills2" class="d-flex flex-wrap"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container text-center py-4 border-top border-secondary text-details-custom" style="font-size:0.8rem;">
+        © 2026 AI-Driven Job Market Skill Demand Analyzer. All Rights Reserved.
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JS files -->
+    <script src="js/model_data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

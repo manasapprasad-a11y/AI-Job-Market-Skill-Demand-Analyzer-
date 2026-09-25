@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - AI-Driven Job Market Skill Demand Analyzer</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Style Sheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-futuristic sticky-top">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-neon" href="index.html">
+                <span>⚡</span> AI Career Hub
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-futuristic active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-futuristic" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-futuristic" href="recommendation.html">Recommendations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-futuristic" href="comparison.html">Comparison</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-futuristic" href="estimator.html">Learning Estimator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-futuristic" href="readiness.html">Resume Analyzer</a>
+                    </li>
+                </ul>
+                <div class="profile-dropdown-container">
+                    <button class="btn-profile-trigger" id="profileTriggerBtn">
+                        👤 Profile <span style="font-size:0.75rem;">▼</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section container">
+        <div class="hero-subtitle">AI-Driven Job Market Skill Demand Analyzer</div>
+        <h1 class="hero-title text-gradient-purple">Explore Your Career Potential With Data-Driven Insights</h1>
+        <p class="hero-description text-muted-custom">
+            Discover In-Demand Skills, Analyze Career Opportunities, Evaluate Resume Readiness, and Make Data-Driven Career Decisions.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="recommendation.html" class="btn btn-neon-purple">Explore Recommendations</a>
+            <a href="dashboard.html" class="btn btn-neon-outline">View Analytics Dashboard</a>
+        </div>
+    </section>
+
+    <!-- Animated Numerical Counter Statistics -->
+    <section class="container mb-5">
+        <div class="row g-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="glass-card text-center py-4">
+                    <div class="stat-counter-val neon-text-purple" id="counterJobsAnalyzed">0</div>
+                    <div class="text-details-custom mt-2">Total Jobs Analyzed</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="glass-card text-center py-4 cyan-glow">
+                    <div class="stat-counter-val neon-text-cyan" id="counterTotalSkills">0</div>
+                    <div class="text-details-custom mt-2">Total Core Skills</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="glass-card text-center py-4 blue-glow">
+                    <div class="stat-counter-val neon-text-blue" id="counterCategories">0</div>
+                    <div class="text-details-custom mt-2">Career Categories</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="glass-card text-center py-4 pink-glow">
+                    <div class="stat-counter-val neon-text-pink" id="counterAccuracy">0</div>
+                    <div class="text-details-custom mt-2">Recommendation Accuracy</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Technologies & In-Demand Skills -->
+    <section class="container mb-5 py-3">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="glass-card">
+                    <h4 class="neon-text-purple mb-4">🚀 Trending Technologies</h4>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="p-3 rounded bg-dark border-1 border-secondary">
+                                <h6 class="text-gradient-purple mb-1">Artificial Intelligence</h6>
+                                <p class="text-details-custom m-0" style="font-size:0.8rem;">Generative Agents & Deep Nets</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="p-3 rounded bg-dark border-1 border-secondary">
+                                <h6 class="text-gradient-cyan mb-1">Machine Learning</h6>
+                                <p class="text-details-custom m-0" style="font-size:0.8rem;">Predictive Pipelines & Classifiers</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="p-3 rounded bg-dark border-1 border-secondary">
+                                <h6 class="text-gradient-pink mb-1">Cloud Computing</h6>
+                                <p class="text-details-custom m-0" style="font-size:0.8rem;">AWS, Azure Kubernetes Stacks</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="p-3 rounded bg-dark border-1 border-secondary">
+                                <h6 class="text-gradient-purple mb-1">Cybersecurity</h6>
+                                <p class="text-details-custom m-0" style="font-size:0.8rem;">Zero-Trust Routing & IPS</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="p-3 rounded bg-dark border-1 border-secondary">
+                                <h6 class="text-gradient-pink mb-1">Blockchain</h6>
+                                <p class="text-details-custom m-0" style="font-size:0.8rem;">Ethereum Smart Contracts</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="p-3 rounded bg-dark border-1 border-secondary">
+                                <h6 class="text-gradient-cyan mb-1">Data Analytics</h6>
+                                <p class="text-details-custom m-0" style="font-size:0.8rem;">ETL pipelines & Bi dashboards</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="glass-card cyan-glow">
+                    <h4 class="neon-text-cyan mb-4">🏆 Most In-Demand Skills</h4>
+                    <ul class="list-group list-group-flush bg-transparent">
+                        <li class="list-group-item bg-transparent text-secondary-custom d-flex justify-content-between align-items-center border-secondary ps-0">
+                            <span>🐍 Python Programming</span>
+                            <span class="badge bg-primary">96% Demand</span>
+                        </li>
+                        <li class="list-group-item bg-transparent text-secondary-custom d-flex justify-content-between align-items-center border-secondary ps-0">
+                            <span>📊 SQL Database Querying</span>
+                            <span class="badge bg-info text-dark">91% Demand</span>
+                        </li>
+                        <li class="list-group-item bg-transparent text-secondary-custom d-flex justify-content-between align-items-center border-secondary ps-0">
+                            <span>⚡ JavaScript (React & Node)</span>
+                            <span class="badge bg-purple">88% Demand</span>
+                        </li>
+                        <li class="list-group-item bg-transparent text-secondary-custom d-flex justify-content-between align-items-center border-secondary ps-0">
+                            <span>☁ Amazon Web Services (AWS)</span>
+                            <span class="badge bg-pink">82% Demand</span>
+                        </li>
+                        <li class="list-group-item bg-transparent text-secondary-custom d-flex justify-content-between align-items-center border-secondary ps-0">
+                            <span>📈 Power BI & Tableau visualization</span>
+                            <span class="badge bg-success">78% Demand</span>
+                        </li>
+                        <li class="list-group-item bg-transparent text-secondary-custom d-flex justify-content-between align-items-center border-0 ps-0">
+                            <span>🤖 Deep Learning & NLP Models</span>
+                            <span class="badge bg-warning text-dark">75% Demand</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Opportunities, Hiring Trends & Career Insights -->
+    <section class="container mb-5">
+        <h3 class="neon-text-blue mb-4">💡 Strategic Career Insights</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="glass-card blue-glow">
+                    <h5 class="neon-text-blue mb-3">💼 Career Opportunities</h5>
+                    <p class="text-secondary-custom" style="font-size: 0.9rem;">
+                        Supported job profiles range from **Data Scientists** and **AI Engineers** to **Cloud Architects** and **Full Stack Web Developers**. Each profile maps direct core capabilities and hiring trends.
+                    </p>
+                    <a href="recommendation.html" class="text-gradient-cyan text-decoration-none" style="font-size:0.85rem; font-weight:600;">Explore Opportunities ↗</a>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="glass-card pink-glow">
+                    <h5 class="neon-text-pink mb-3">📈 Hiring Trends</h5>
+                    <p class="text-secondary-custom" style="font-size: 0.9rem;">
+                        Overall job index trends show a compounding **24% YOY Growth** across AI, Machine Learning, and Cloud Security sectors, outpacing traditional server-side administration.
+                    </p>
+                    <a href="dashboard.html" class="text-gradient-pink text-decoration-none" style="font-size:0.85rem; font-weight:600;">View Trend Graphs ↗</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="glass-card">
+                    <h5 class="neon-text-purple mb-3">🧠 Skills Arbitrage</h5>
+                    <p class="text-secondary-custom" style="font-size: 0.9rem;">
+                        Candidates who combine **Software Engineering (Java/JS)** with **Data Analytics (Python/SQL)** command a **35% higher average entry package** across modern enterprises.
+                    </p>
+                    <a href="estimator.html" class="text-gradient-purple text-decoration-none" style="font-size:0.85rem; font-weight:600;">Map Learning Time ↗</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container text-center py-4 border-top border-secondary text-details-custom" style="font-size:0.8rem;">
+        © 2026 AI-Driven Job Market Skill Demand Analyzer. All Rights Reserved.
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom script logic -->
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

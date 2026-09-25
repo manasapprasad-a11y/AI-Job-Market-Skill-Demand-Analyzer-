@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard - AI-Driven Job Market Skill Demand Analyzer</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom Style Sheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-futuristic sticky-top">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-neon" href="index.html">
+                <span>⚡</span> AI Career Hub
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-futuristic" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-futuristic active" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-futuristic" href="recommendation.html">Recommendations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-futuristic" href="comparison.html">Comparison</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-futuristic" href="estimator.html">Learning Estimator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-futuristic" href="readiness.html">Resume Analyzer</a>
+                    </li>
+                </ul>
+                <div class="profile-dropdown-container">
+                    <button class="btn-profile-trigger" id="profileTriggerBtn">
+                        👤 Profile <span style="font-size:0.75rem;">▼</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Title -->
+    <div class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <h2 class="text-gradient-purple">📊 Job Market Analytics Dashboard</h2>
+                <p class="text-details-custom">
+                    Real-time market insights aggregated from over 30,000 active listings in our dataset. Zero external cloud dependencies.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts Container Grid -->
+    <main class="container mb-5">
+        <div class="row g-4">
+            
+            <!-- 1. Top Skills Chart -->
+            <div class="col-lg-8">
+                <div class="glass-card">
+                    <h5 class="neon-text-purple mb-3">🔥 Top Skills Demand Index</h5>
+                    <div style="height: 320px; position: relative;">
+                        <canvas id="chartTopSkills"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Top Roles Chart -->
+            <div class="col-lg-4">
+                <div class="glass-card cyan-glow">
+                    <h5 class="neon-text-cyan mb-3">🎯 Top Job Roles Share</h5>
+                    <div style="height: 320px; position: relative;">
+                        <canvas id="chartTopRoles"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Salary Distribution Chart -->
+            <div class="col-md-4">
+                <div class="glass-card blue-glow">
+                    <h5 class="neon-text-blue mb-3">💰 Annual Package Distribution (%)</h5>
+                    <div style="height: 250px; position: relative;">
+                        <canvas id="chartSalaryDist"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Hiring Trends Chart -->
+            <div class="col-md-4">
+                <div class="glass-card pink-glow">
+                    <h5 class="neon-text-pink mb-3">📈 General Hiring Growth curve</h5>
+                    <div style="height: 250px; position: relative;">
+                        <canvas id="chartHiringTrends"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Top Hiring Companies Chart -->
+            <div class="col-md-4">
+                <div class="glass-card">
+                    <h5 class="neon-text-purple mb-3">🏢 Hiring Velocity by Enterprise</h5>
+                    <div style="height: 250px; position: relative;">
+                        <canvas id="chartTopCompanies"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container text-center py-4 border-top border-secondary text-details-custom" style="font-size:0.8rem;">
+        © 2026 AI-Driven Job Market Skill Demand Analyzer. All Rights Reserved.
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom script logic -->
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
